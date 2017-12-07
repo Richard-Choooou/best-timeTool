@@ -1,0 +1,25 @@
+{
+  "name": "best-calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config -o bundle.js"
+  },
+  "keywords": [],
+  "author": "zhoupeng1995@live.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "the-answer": "^1.0.0"
+  },
+  "dependencies": {
+    "lib-flexible": "^0.3.2"
+  }
+}
