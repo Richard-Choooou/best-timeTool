@@ -1,11 +1,20 @@
 // src/main.js
 
-import {version} from '../package.json'
+import { version } from '../package.json'
+import {CountDown} from './modules/count-down'
 // import 'lib-flexible'
-export default function () {
-    let a = 40
-    let b = 30
-
-    console.log(a, b)
-  console.log(version);
+const modules = {
+  CountDown
 }
+
+const BTime = function() {
+    this.version = version
+}
+
+
+
+for(let i in modules) {
+  BTime.prototype[i] = modules[i]
+}
+ 
+export default new BTime()

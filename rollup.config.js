@@ -5,9 +5,9 @@ import babel from 'rollup-plugin-babel';
 export default {
     input: 'src/main.js',
     output: {
-        file: 'bundle.js',
+        dest: 'dist/BTime.js',
         format: 'umd',
-        name: 'BCalendar'
+        name: 'BTime'
     },
     plugins: [json(), resolve(), babel({
         exclude: 'node_modules/**'

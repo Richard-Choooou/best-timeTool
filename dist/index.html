@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./BTime.js"></script>
+    <script>
+        (function(){
+            var time = new BTime.CountDown(new Date().getTime() + 10000, new Date(), 
+            function(date) {
+                console.log(date)
+            }, function() {
+                console.log('done')
+            })
+
+            setTimeout(() => {
+                time.stop()
+            }, 5000);
+
+            setTimeout(() => {
+                time.start()
+            }, 10000);
+        }())
+    </script>
+</body>
+</html>
