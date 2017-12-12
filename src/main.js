@@ -2,9 +2,11 @@
 
 import { version } from '../package.json'
 import {CountDown} from './modules/count-down'
+import {Calendar} from './modules/calendar'
 // import 'lib-flexible'
 const modules = {
-  CountDown
+  CountDown,
+  Calendar
 }
 
 const BTime = function() {

@@ -1,4 +1,6 @@
-export class CountDown {
+import injectObserver from '../core/events'
+
+class CountDown {
     
     /**
      * 
@@ -12,8 +14,8 @@ export class CountDown {
         targetTime = new Date(targetTime).getTime()
         this.timeRemaining = (+targetTime) - (+this.nowTime)
         this.interval = null
-        this.timing = timing
-        this.timend = timend
+        // this.timing = timing
+        // this.timend = timend
         this.start()
     }
  
@@ -43,15 +45,15 @@ export class CountDown {
             this.timeRemaining -= 500
             if(this.timeRemaining <= 0) {
                 clearInterval(this.interval)
-                this.timing({
+                this.dispatchEvent('timing',{
                     day: '00',
                     hours: '00',
                     minute: '00',
                     second: '00'
-                }) 
-                this.timend()
+                })
+                this.dispatchEvent('timend')
             }else {
-                this.timing({
+                this.dispatchEvent('timing', {
                     day: getDay(this.timeRemaining),
                     hours: getHours(this.timeRemaining),
                     minute: getMinute(this.timeRemaining),
@@ -70,7 +72,10 @@ export class CountDown {
     stop(runCallback) {
         clearInterval(this.interval)
         if(runCallback) {
-            this.timend()
+            this.dispatchEvent('timend')
         }
     }
 }
+
+injectObserver(CountDown)
+export {CountDown}

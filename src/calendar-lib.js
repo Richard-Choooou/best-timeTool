@@ -187,8 +187,9 @@ CalendarLib.prototype = {
 				nextMonth: [],
 				year: year,
 				month: month,
-				today: `${this.nowDate.getFullYear()}/${this.nowDate.getMonth() + 1}/${this.nowDate.getDate()}`,
-				day: day
+				day: day,
+				today: `${this.nowDate.getFullYear()}/${this.nowDate.getMonth() + 1}/${this.nowDate.getDate()}`
+				
 			}
 
 		if (!this.options.firstColumnIsWeekday) {

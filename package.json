@@ -2,11 +2,10 @@
   "name": "best-calendar",
   "version": "1.0.0",
   "description": "",
-  "main": "bundle.js",
+  "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config -o bundle.js",
-    "dev": "rollup -c -w bundle.js"
+    "build": "rollup --config -o bundle.js"
   },
   "keywords": [],
   "author": "zhoupeng1995@live.com",
