@@ -3,6 +3,7 @@
 
 calendar lib
 
+EN/ 中文文档
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -22,14 +23,14 @@ calendar lib
 [download-image]: https://img.shields.io/npm/dm/best-calendar.svg?style=flat-square
 [download-url]: https://npmjs.org/package/best-calendar
 
-# Introduction
-this is a calendar lib, have not DOM, you can customization style by yourself
+# 说明
+一个可以自己定制样式的日历库，没有dom操作， 只封装了日历的算法，得到需要的日历数据
 
-# Installation
+# 安装
     $ npm i best-calendar --save
 
-# usage
-## import 
+# 使用方法
+## 导入
 
     //By commonjs
     const BTime = require('best-calendar')
@@ -38,7 +39,7 @@ this is a calendar lib, have not DOM, you can customization style by yourself
     //By DOM script
     <script src="./js/BTime.min.js"></script>
 
-## use
+## 使用
     let calendar = new BTime.Calendar({
         // ...some options
     })
@@ -59,41 +60,41 @@ this is a calendar lib, have not DOM, you can customization style by yourself
         */
     })
 
-# Configuration
+# 属性配置
     let calendar = new BTime.Calendar({
         // ...some options
         firstColumnIsWeekend: true
     })
 ## firstColumnIsWeekend(# option)
     default: true
-if this calendar first column date is weekend set it true else set it false
+如果日历的第一列是周末，那么设置firstColumnIsWeekend 为 true，否则 设置成false
 
 # API
 ## goLastMonth(# method)
-    params: no params
+    params: no params //没有参数
     
-go to the last month by current date then get last month calendar data and set current date to last month
+根据日历当前日期获取上一个月的日期数据，并且将日历当前日期设置为上一个月的日期
 ## goNextMonth(# method)
-    params: no params
-go to the next month by current date then get next month calendar data and set current date to next month
+    params: no params //没有参数
+根据日历当前日期获取下一个月的日期数据，并且将日历当前日期设置为下一个月的日期
 ## goLastYear(# method)
-    params: no params
-go to the last year by current date then get last year calendar data and set current date to last year
+    params: no params //没有参数
+根据日历当前日期获取上一年的日期数据，并且将日历当前日期设置为上一年的日期
 ## goNextYear(# method)
-    params: no params
-go to the next year by current date then get next year calendar data and set current date to next year
+    params: no params //没有参数
+根据日历当前日期获取下一年的日期数据，并且将日历当前日期设置为下一年的日期
 ## go(# method)
-    params: one param
-    arguments[0] type: Number
+    params: one param //一个参数
+    arguments[0] type: Number // 类型为数字
 
     examples: 
-        calendar.go(-1)     // be equivalent to calendar.goLastMonth()
-        calendar.go(-2)     // be equivalent to executed twice calendar.goLastMonth()
-        calendar.go(-12)    // be equivalent to calendar.goLastYear()
-        calendar.go(1)     // be equivalent to calendar.goNextMonth()
-        calendar.go(12)    // be equivalent to calendar.goNextYear()
+        calendar.go(-1)     // 使用效果等同于 calendar.goLastMonth()
+        calendar.go(-2)     // 使用效果等用于 执行两次 calendar.goLastMonth()
+        calendar.go(-12)    // 使用效果等同于 calendar.goLastYear()
+        calendar.go(1)      // 使用效果等同于 calendar.goNextMonth()
+        calendar.go(12)     // 使用效果等用于 执行两次 calendar.goNextYear()
 
-if this lib is useful, star it,thanks
+如果觉得好用，请给个star,您的支持，是我的动力
 
 
 

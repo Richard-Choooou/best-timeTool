@@ -6,7 +6,7 @@ class Calendar extends Core {
     constructor(options) {
         super()
         this.options = Object.assign({}, {
-            firstColumnIsWeekday: true,
+            firstColumnIsWeekend: true,
 			dayCount: 42,
 			startDate: this.nowDate
 		}, options)
@@ -50,6 +50,10 @@ class Calendar extends Core {
 			throw new Error('[BTime: getThisDate]: parameter error')
 		}
 	}
+
+	setSelectDate() {
+		
+	}
     
     goLastMonth() {
 		this.dispatchEvent('dateChange', this.go(-1))
@@ -85,7 +89,7 @@ class Calendar extends Core {
 				today: `${this.nowDate.getFullYear()}/${this.nowDate.getMonth() + 1}/${this.nowDate.getDate()}`
 			}
 
-		if (!this.options.firstColumnIsWeekday) {
+		if (!this.options.firstColumnIsWeekend) {
 			fistWeekInMonth--
 		}
 

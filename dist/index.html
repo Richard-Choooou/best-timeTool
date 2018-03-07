@@ -7,9 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./BTime.js"></script>
+    <script src="./BTime.min.js"></script>
     <script>
         let calendar = new BTime.Calendar()
+        let countDown = new BTime.CountDown(new Date().getTime() + 10000, new Date())
+        
+        setInterval(function() {
+            calendar.getThisDate('2017-12-1')
+            calendar.goLastMonth()
+            calendar.goNextMonth()
+            calendar.goLastYear()
+            calendar.goNextYear()
+            countDown.on('timing', function(date) {
+                console.log(date)
+            })
+
+            countDown.on('timed', function() {
+                console.log('done')
+            })
+        }, 1000)
         calendar.on('dateChange', function(date) {
             console.log(date)
         })

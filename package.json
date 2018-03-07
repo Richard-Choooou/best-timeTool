@@ -1,13 +1,16 @@
 {
   "name": "best-calendar",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "./src/main.js",
+  "main": "./dist/BTime.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config -o bundle.js"
   },
-  "keywords": [],
+  "keywords": [
+    "calendar",
+    "count down"
+  ],
   "author": "zhoupeng1995@live.com",
   "license": "ISC",
   "devDependencies": {
@@ -24,10 +27,9 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^3.0.0",
     "rollup-watch": "^4.3.1",
     "the-answer": "^1.0.0"
   },
-  "dependencies": {
-    "lib-flexible": "^0.3.2"
-  }
+  "dependencies": {}
 }
