@@ -94,7 +94,7 @@ go to the next year by current date then get next year calendar data and set cur
         calendar.go(1)     // be equivalent to calendar.goNextMonth()
         calendar.go(12)    // be equivalent to calendar.goNextYear()
 
-if this lib is useful, star it,thanks
+if this lib is useful, [star it](https://github.com/Richard-Choooou/best-timeTool),thanks
 
 
 
