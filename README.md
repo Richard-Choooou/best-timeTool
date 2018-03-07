@@ -3,6 +3,7 @@
 
 calendar lib
 
+EN/ [中文文档](https://github.com/Richard-Choooou/best-timeTool/tree/master/doc)
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
