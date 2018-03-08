@@ -45,7 +45,7 @@ class Calendar extends Core {
 
 	setCurrentDate(date) {
 		let currentDate = new Date(date)
-		console.log(currentDate)
+		// console.log(currentDate)
 		if(!currentDate) {
 			throw new Error('[BTime Calendar]: function setCurrentDate receive a wrong date' + date)
 		}

@@ -10,23 +10,12 @@
     <script src="./BTime.min.js"></script>
     <script>
         let calendar = new BTime.Calendar()
-        // console.log(bt)
-        let countDown = new BTime.CountDown(new Date().getTime() + 10000, new Date())
-        console.log(calendar)
-        // setInterval(function() {
-        //     calendar.getThisDate('2017-12-1')
-        //     calendar.goLastMonth()
-        //     calendar.goNextMonth()
-        //     calendar.goLastYear()
-        //     calendar.goNextYear()
-        //     countDown.on('timing', function(date) {
-        //         console.log(date)
-        //     })
-
-        //     countDown.on('timed', function() {
-        //         console.log('done')
-        //     })
-        // }, 1000)
+        setInterval(function() {
+            calendar.goLastMonth()
+            calendar.goNextMonth()
+            calendar.goLastYear()
+            calendar.goNextYear()
+        }, 1000)
         calendar.on('dateChange', function(date) {
             console.log(date)
         })

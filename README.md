@@ -1,7 +1,6 @@
 # best-canlender
----
+this is a calendar lib, have not DOM, you can customization style by yourself. 一个可以自己定制样式的日历库，没有dom操作， 只封装了日历的算法，得到需要的日历数据。
 
-calendar lib
 
 EN/ [中文文档](https://github.com/Richard-Choooou/best-timeTool/tree/master/doc)
 
@@ -99,7 +98,7 @@ go to the next year by current date then get next year calendar data and set cur
 
     examples: 
         calendar.setCurrentDate(new Date('2018/3/8')) 
-        calendar.setCurrentDate('2018/3/8')             // must be separated by white '/'
+        calendar.setCurrentDate('2018/3/8')             // must be separated by '/'
 ## on(# method)
     params: two params
         arguments[0] type: String      "have only one event, that is 'dateChange'"
