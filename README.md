@@ -1,5 +1,5 @@
 # best-canlender
-this is a calendar lib, have not DOM, you can customization style by yourself. 一个可以自己定制样式的日历库，没有dom操作， 只封装了日历的算法，得到需要的日历数据。
+this calendar lib encapsulation calendar's algorithm for get calendar data, have not DOM, you can customization style by yourself. 一个可以自己定制样式的日历库，没有dom操作， 只封装了日历的算法，得到需要的日历数据。
 
 
 EN/ [中文文档](https://github.com/Richard-Choooou/best-timeTool/tree/master/doc)
@@ -23,7 +23,7 @@ EN/ [中文文档](https://github.com/Richard-Choooou/best-timeTool/tree/master/
 [download-url]: https://npmjs.org/package/best-calendar
 
 # Introduction
-this is a calendar lib, have not DOM, you can customization style by yourself
+this calendar lib encapsulation calendar's algorithm for get calendar data, have not DOM, you can customization style by yourself.
 
 # Installation
     $ npm i best-calendar --save
