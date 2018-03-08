@@ -10,16 +10,18 @@ class Calendar extends Core {
 			dayCount: 42,
 			startDate: this.nowDate
 		}, options)
-		this.userSeletDate =  this.options.startDate
+		this.userSeletDate = new Date(this.options.startDate)
 		setTimeout(() => {
 			this.dispatchEvent('dateChange', this.go(0))
 		}, 0);
-    }
+	}
+	
+	// __getDayC
  
     go(params) {
 		let date = this.userSeletDate
 		if (typeof params !== 'number') {
-			throw new Error('function go() need a number parameter')
+			throw new Error('[BTime Calendar]: function go() need a number parameter')
 		}
 		if (params !== 0) {
 			if ( params < 0 ) {
@@ -40,19 +42,15 @@ class Calendar extends Core {
 		}
 		return this.__getFinalData(this.userSeletDate)
 	}
-	
-	getThisDate(params) {
-		let _date = new Date(params)
-		if(_date) {
-			this.userSeletDate = _date
-			this.dispatchEvent('dateChange', this.__getFinalData(_date))
-		} else {
-			throw new Error('[BTime: getThisDate]: parameter error')
-		}
-	}
 
-	setSelectDate() {
-		
+	setCurrentDate(date) {
+		let currentDate = new Date(date)
+		console.log(currentDate)
+		if(!currentDate) {
+			throw new Error('[BTime Calendar]: function setCurrentDate receive a wrong date' + date)
+		}
+		this.userSeletDate = currentDate
+		this.dispatchEvent('dateChange', this.go(0))
 	}
     
     goLastMonth() {
@@ -83,9 +81,9 @@ class Calendar extends Core {
 				lastMonth: [],
 				thisMonth: [],
 				nextMonth: [],
-				year: year,
-				month: month,
-				day: day,
+				currentYear: year,
+				currentMonth: month,
+				currentDay: day,
 				today: `${this.nowDate.getFullYear()}/${this.nowDate.getMonth() + 1}/${this.nowDate.getDate()}`
 			}
 

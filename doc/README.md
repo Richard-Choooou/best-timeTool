@@ -3,7 +3,6 @@
 
 calendar lib
 
-EN/ 中文文档
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -49,9 +48,9 @@ EN/ 中文文档
 
         /**
             data = {
-                year:2017,
-                month:12,
-                day:1,
+                currentYear:2017,
+                currentMonth:12,
+                currentDay:1,
                 lastMonth:[26, 27, 28, 29, 30],
                 nextMonth:[1, 2, 3, 4, 5, 6],
                 thisMonth: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16, 17, 18, 19, 20, 21, 22, 23, 24,   25, 26, 27, 28, 29, 30, 31],
@@ -93,6 +92,37 @@ EN/ 中文文档
         calendar.go(-12)    // 使用效果等同于 calendar.goLastYear()
         calendar.go(1)      // 使用效果等同于 calendar.goNextMonth()
         calendar.go(12)     // 使用效果等用于 执行两次 calendar.goNextYear()
+## setCurrentDate(# method)
+    params: one param
+    arguments[0] type: [Object Date] or [Object String] //类型为日期对象 或者 字符串
+
+    examples: 
+        calendar.setCurrentDate(new Date('2018/3/8')) 
+        calendar.setCurrentDate('2018/3/8')             // 必须以'/'分隔
+
+## on(# method)
+    params: two params
+        arguments[0] type: String      "只有dateChange事件"
+        arguments[1] type: Function    当datechange事件触发时，将执行这个回调函数
+
+    执行方法 'setCurrentDate' 'go' 'goNextYear' 'goLastYear' 'goNextMonth' 'goLastMonth' 会触发这个事件
+
+    example:
+        calendar.on('dateChange', function(date) {
+            console.log(date)
+
+            /**
+                data = {
+                    currentYear:2017,
+                    currentMonth:12,
+                    currentDay:1,
+                    lastMonth:[26, 27, 28, 29, 30],
+                    nextMonth:[1, 2, 3, 4, 5, 6],
+                    thisMonth: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15, 16, 17, 18, 19, 20, 21, 22, 23, 24,   25, 26, 27, 28, 29, 30, 31],
+                    today:"2018/3/7"
+                }
+            */
+        })
 
 如果觉得好用，请给个star,您的支持，是我的动力
 

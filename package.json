@@ -1,6 +1,6 @@
 {
   "name": "best-calendar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./dist/BTime.min.js",
   "scripts": {
