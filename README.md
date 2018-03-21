@@ -5,13 +5,11 @@ this calendar lib encapsulation calendar's algorithm for get calendar data, have
 EN/ [中文文档](https://github.com/Richard-Choooou/best-timeTool/tree/master/doc)
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
 [![npm download][download-image]][download-url]
 
 
 [npm-image]: http://img.shields.io/npm/v/best-calendar.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/best-calendar
-[travis-image]: https://img.shields.io/travis/react-component/calendar.svg?style=flat-square
 [travis-url]: https://travis-ci.org/react-component/calendar
 [codecov-image]: https://img.shields.io/codecov/c/github/best-calendar/master.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/react-component/calendar/branch/master
@@ -123,7 +121,7 @@ go to the next year by current date then get next year calendar data and set cur
             */
         })
 
-if this lib is useful, [star it](https://github.com/Richard-Choooou/best-timeTool),thanks
+if this lib is useful, [star it on github](https://github.com/Richard-Choooou/best-timeTool),thanks
 
 
 
